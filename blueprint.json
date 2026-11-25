@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.3",
+  "title": "typescript Blueprint",
+  "profile": "standard",
+  "rooms": [
+    {
+      "room_id": "domain",
+      "label": "domain",
+      "member_id": ".",
+      "language": "typescript",
+      "wall_rating": "compartment_wall",
+      "module_count": 2,
+      "max_modules": 35,
+      "public_symbol_count": 6,
+      "breaker_count": 4,
+      "topological_rank": 2,
+      "redline_status": "existing"
+    },
+    {
+      "room_id": "gateway",
+      "label": "gateway",
+      "member_id": ".",
+      "language": "typescript",
+      "wall_rating": "compartment_wall",
+      "module_count": 2,
+      "max_modules": 35,
+      "public_symbol_count": 1,
+      "breaker_count": 1,
+      "topological_rank": 1,
+      "redline_status": "existing"
+    },
+    {
+      "room_id": "root",
+      "label": "root",
+      "member_id": ".",
+      "language": "typescript",
+      "wall_rating": "package_lobby",
+      "module_count": 1,
+      "max_modules": 35,
+      "public_symbol_count": 0,
+      "breaker_count": 0,
+      "topological_rank": 0,
+      "redline_status": "existing"
+    }
+  ],
+  "walls": [
+    {
+      "wall_id": "wall:domain:envelope",
+      "room_id": "domain",
+      "adjacent_room_id": "",
+      "rating": "compartment_wall",
+      "thickness_px": 2
+    },
+    {
+      "wall_id": "wall:gateway:envelope",
+      "room_id": "gateway",
+      "adjacent_room_id": "",
+      "rating": "compartment_wall",
+      "thickness_px": 2
+    },
+    {
+      "wall_id": "wall:root:envelope",
+      "room_id": "root",
+      "adjacent_room_id": "",
+      "rating": "package_lobby",
+      "thickness_px": 1
+    },
+    {
+      "wall_id": "wall:domain|gateway",
+      "room_id": "domain",
+      "adjacent_room_id": "gateway",
+      "rating": "compartment_wall",
+      "thickness_px": 2
+    },
+    {
+      "wall_id": "wall:domain|root",
+      "room_id": "domain",
+      "adjacent_room_id": "root",
+      "rating": "compartment_wall",
+      "thickness_px": 2
+    },
+    {
+      "wall_id": "wall:gateway|root",
+      "room_id": "gateway",
+      "adjacent_room_id": "root",
+      "rating": "compartment_wall",
+      "thickness_px": 2
+    }
+  ],
+  "port_pins": [
+    {
+      "pin_id": "domain::in:SettlementQuote",
+      "room_id": "domain",
+      "symbol_name": "SettlementQuote",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "domain::in:SettlementQuoteSchema",
+      "room_id": "domain",
+      "symbol_name": "SettlementQuoteSchema",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "domain::in:SettlementRequest",
+      "room_id": "domain",
+      "symbol_name": "SettlementRequest",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "domain::in:SettlementRequestSchema",
+      "room_id": "domain",
+      "symbol_name": "SettlementRequestSchema",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "domain::in:buildSettlementQuote",
+      "room_id": "domain",
+      "symbol_name": "buildSettlementQuote",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "domain::in:netAfterDiscount",
+      "room_id": "domain",
+      "symbol_name": "netAfterDiscount",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "gateway::in:parseAndQuoteJson",
+      "room_id": "gateway",
+      "symbol_name": "parseAndQuoteJson",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:SettlementQuote",
+      "room_id": "root",
+      "symbol_name": "SettlementQuote",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:SettlementQuoteSchema",
+      "room_id": "root",
+      "symbol_name": "SettlementQuoteSchema",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:SettlementRequest",
+      "room_id": "root",
+      "symbol_name": "SettlementRequest",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:SettlementRequestSchema",
+      "room_id": "root",
+      "symbol_name": "SettlementRequestSchema",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:buildSettlementQuote",
+      "room_id": "root",
+      "symbol_name": "buildSettlementQuote",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:netAfterDiscount",
+      "room_id": "root",
+      "symbol_name": "netAfterDiscount",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::in:parseAndQuoteJson",
+      "room_id": "root",
+      "symbol_name": "parseAndQuoteJson",
+      "direction": "inbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "gateway::out:domain",
+      "room_id": "gateway",
+      "symbol_name": "out->domain",
+      "direction": "outbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::out:domain",
+      "room_id": "root",
+      "symbol_name": "out->domain",
+      "direction": "outbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    },
+    {
+      "pin_id": "root::out:gateway",
+      "room_id": "root",
+      "symbol_name": "out->gateway",
+      "direction": "outbound_port",
+      "has_circuit_breaker": true,
+      "redline_status": "existing"
+    }
+  ],
+  "circuit_breakers": [
+    {
+      "breaker_id": "domain::cb:SettlementQuoteSchema",
+      "room_id": "domain",
+      "symbol_name": "SettlementQuoteSchema",
+      "guard_kind": "strict_schema"
+    },
+    {
+      "breaker_id": "domain::cb:SettlementRequestSchema",
+      "room_id": "domain",
+      "symbol_name": "SettlementRequestSchema",
+      "guard_kind": "strict_schema"
+    },
+    {
+      "breaker_id": "domain::cb:buildSettlementQuote",
+      "room_id": "domain",
+      "symbol_name": "buildSettlementQuote",
+      "guard_kind": "boundary_guard"
+    },
+    {
+      "breaker_id": "domain::cb:netAfterDiscount",
+      "room_id": "domain",
+      "symbol_name": "netAfterDiscount",
+      "guard_kind": "boundary_guard"
+    },
+    {
+      "breaker_id": "gateway::cb:parseAndQuoteJson",
+      "room_id": "gateway",
+      "symbol_name": "parseAndQuoteJson",
+      "guard_kind": "boundary_guard"
+    }
+  ],
+  "buses": [
+    {
+      "bus_id": "gateway->domain",
+      "source_room": "gateway",
+      "target_room": "domain",
+      "port_symbols": [
+        "buildSettlementQuote"
+      ],
+      "call_count": 1,
+      "has_breaker_guard": true,
+      "redline_status": "existing"
+    },
+    {
+      "bus_id": "root->domain",
+      "source_room": "root",
+      "target_room": "domain",
+      "port_symbols": [],
+      "call_count": 0,
+      "has_breaker_guard": true,
+      "redline_status": "existing"
+    },
+    {
+      "bus_id": "root->gateway",
+      "source_room": "root",
+      "target_room": "gateway",
+      "port_symbols": [],
+      "call_count": 0,
+      "has_breaker_guard": true,
+      "redline_status": "existing"
+    }
+  ],
+  "external_risers": [
+    {
+      "riser_id": "domain=>riser:external_package:zod",
+      "room_id": "domain",
+      "kind": "external_package",
+      "target_name": "zod",
+      "redline_status": "existing"
+    }
+  ],
+  "invariant_pins": [],
+  "redlines": [],
+  "netlist_digest": "sha256:b819974669136b232fd7dd7ff87348772b77ad3d299c578dadd2306ab266603b"
+}
