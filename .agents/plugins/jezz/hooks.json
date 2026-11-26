@@ -1,0 +1,11 @@
+{
+  "jezz-jbc-stop-gate": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "REPO_ROOT=\"$(CDPATH= cd -- \"${PLUGIN_ROOT:-.}/../../..\" && pwd)\"; if [ -x \"$REPO_ROOT/.venv/bin/jezz\" ]; then exec \"$REPO_ROOT/.venv/bin/jezz\" hook stop --root \"$REPO_ROOT\"; elif command -v jezz >/dev/null 2>&1; then exec jezz hook stop --root \"$REPO_ROOT\"; fi",
+        "timeout": 15
+      }
+    ]
+  }
+}
