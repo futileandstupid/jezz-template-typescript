@@ -12,7 +12,7 @@ Turnkey **TypeScript (`strict: true`)** starter repository governed by the **Jez
 ## Quickstart
 
 ```bash
-uvx --from git+https://github.com/futileandstupid/jezz@v0.6.0 jezz init my-ts-app --scaffold typescript
+uvx --from git+https://github.com/futileandstupid/jezz@v0.6.1 jezz init my-ts-app --scaffold typescript
 cd my-ts-app
 npm install
 npm run typecheck && npm test
@@ -21,7 +21,7 @@ npm run typecheck && npm test
 ## Statutory Gates
 
 ```bash
-uvx --from git+https://github.com/futileandstupid/jezz@v0.6.0 jezz inspect .
-uvx --from git+https://github.com/futileandstupid/jezz@v0.6.0 jezz prove . --require-deductive
-uvx --from git+https://github.com/futileandstupid/jezz@v0.6.0 jezz blueprint . --verify-target blueprint.json --write-html blueprint.html
+uvx --from git+https://github.com/futileandstupid/jezz@v0.6.1 jezz inspect .
+uvx --from git+https://github.com/futileandstupid/jezz@v0.6.1 jezz prove . --require-deductive
+uvx --from git+https://github.com/futileandstupid/jezz@v0.6.1 jezz blueprint . --verify-target blueprint.json --write-html blueprint.html
 ```

@@ -34,7 +34,7 @@ jobs:
           npm test
 
       - name: Enforce Jezz JBC v1.3, Blueprint LVS, and Z3 Contract Proof Gate
-        uses: futileandstupid/jezz@v0.6.0
+        uses: futileandstupid/jezz@v0.6.1
         with:
           mode: ${{ github.event_name == 'pull_request' && 'both' || 'full' }}
           language: "typescript"
